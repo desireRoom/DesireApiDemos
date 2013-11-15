@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- ************************************* -->
+        <!-- APPLICATION PACKAGE SAMPLES -->
+        <!-- ************************************* -->
+
+
+        <!-- Activity Samples -->
+        <activity
+            android:name="animation.BounchingBalls"
+            android:label="Desire/Animation/Bounching Balls" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
