@@ -30,7 +30,7 @@
 
         <!-- Activity Samples -->
         <activity
-            android:name="animation.BounchingBalls"
+            android:name=".animation.BouncingBalls"
             android:label="Desire/Animation/Bounching Balls" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
