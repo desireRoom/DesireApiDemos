@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Button" />
+
+        <CheckBox
+            android:id="@+id/custom_anim_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom Animations" >
+        </CheckBox>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/appearing_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="In" />
+
+        <CheckBox
+            android:id="@+id/disappearing_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Out" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/changing_appearing_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Changing-In" />
+
+        <CheckBox
+            android:id="@+id/changing_disappearing_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Changing-Out" />
+    </LinearLayout>
+
+</LinearLayout>
