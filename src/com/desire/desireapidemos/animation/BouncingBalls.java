@@ -30,7 +30,7 @@ public class BouncingBalls extends Activity {
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.bouncing_balls);
+		setContentView(R.layout.animation_bouncing_balls);
 		LinearLayout container = (LinearLayout) findViewById(R.id.container);
 		container.addView(new MyAnimationView(this));
 	}

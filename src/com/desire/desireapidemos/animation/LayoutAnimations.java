@@ -39,7 +39,7 @@ public class LayoutAnimations extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_animations);
+        setContentView(R.layout.animation_layout);
 
         container = new FixedGridLayout(this);
         container.setClipChildren(false);

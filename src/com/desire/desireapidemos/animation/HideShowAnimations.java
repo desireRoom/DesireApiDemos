@@ -27,7 +27,7 @@ public class HideShowAnimations extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.hide_show_animations);
+		setContentView(R.layout.animation_hide_show);
 
 		final CheckBox hideGoneCb = (CheckBox) findViewById(R.id.hide_show_cb);
 

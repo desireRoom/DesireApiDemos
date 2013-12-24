@@ -29,6 +29,7 @@
 
 
         <!-- Activity Samples -->
+        <!-- Animations -->
         <activity
             android:name=".animation.BouncingBalls"
             android:label="Desire/Animation/Bounching Balls" >
@@ -95,6 +96,15 @@
         <activity
             android:name=".animation.Loading"
             android:label="Desire/Animation/Loading" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".animation.MultipleProperties"
+            android:label="Desire/Animation/Multiple Properties" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
