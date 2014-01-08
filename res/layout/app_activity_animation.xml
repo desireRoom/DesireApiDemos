@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dip"
+        android:text="@string/activity_animation_msg"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/fade_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_animation_fade" >
+
+        <requestFocus />
+    </Button>
+
+    <Button
+        android:id="@+id/zoom_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_animation_zoom" >
+    </Button>
+
+    <Button
+        android:id="@+id/modern_fade_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_modern_animation_fade" >
+
+        <requestFocus />
+    </Button>
+
+    <Button
+        android:id="@+id/modern_zoom_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_modern_animation_zoom" >
+    </Button>
+
+    <Button
+        android:id="@+id/scale_up_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_scale_up_animation" >
+    </Button>
+
+    <Button
+        android:id="@+id/zoom_thumbnail_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_zoom_thumbnail_animation" >
+    </Button>
+
+</LinearLayout>

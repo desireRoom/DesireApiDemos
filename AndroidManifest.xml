@@ -194,6 +194,24 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".app.ActivityAnimation"
+            android:label="Desire/App/Activity/Animation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.AlertDialogs"
+            android:label="Desire/App/Alert Dialogs" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
