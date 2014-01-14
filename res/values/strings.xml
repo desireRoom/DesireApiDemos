@@ -50,5 +50,14 @@
     <string name="activity_modern_animation_zoom">Modern zoom in</string>
     <string name="activity_scale_up_animation">Scale up</string>
     <string name="activity_zoom_thumbnail_animation">Thumbnail zoom</string>
+    
+    <string name="custom_dialog_activity_text">Example of how you can use a
+            custom Theme.Dialog theme to make an activity that looks like a
+            customized dialog, here with an ugly frame.</string>
+            
+    <string name="custom_title_left">Left is best</string>
+    <string name="custom_title_right">Right is always right</string>
+    <string name="custom_title_left_button">Change Left</string>
+    <string name="custom_title_right_button">Change Right</string>
 
 </resources>

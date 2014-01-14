@@ -204,6 +204,27 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".app.ActivityCustomDialog"
+            android:label="Desire/App/Activity/Custom Dialog"
+            android:theme="@style/Theme.CustomDialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityCustomTitle"
+            android:label="Desire/App/Activity/Custom Title"
+            android:theme="@android:style/Theme"
+            android:windowSoftInputMode="stateVisible|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".app.AlertDialogs"
             android:label="Desire/App/Alert Dialogs" >
             <intent-filter>
