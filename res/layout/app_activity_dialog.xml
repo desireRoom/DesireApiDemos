@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+    <!-- Message to show to use. -->
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/dialog_activity_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <!--
+         Container in which we are going to add and remove views, to demonstrate
+         how the layout adjusts based on size.
+    -->
+
+    <LinearLayout
+        android:id="@+id/inner_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp" >
+    </LinearLayout>
+
+    <!-- Alert dialog style buttons along the bottom. -->
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:measureWithLargestChild="true" >
+
+        <Button
+            android:id="@+id/add"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_activity_add" />
+
+        <Button
+            android:id="@+id/remove"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dialog_activity_remove" />
+    </LinearLayout>
+
+</LinearLayout>

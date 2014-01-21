@@ -225,6 +225,43 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".app.ActivityDialog"
+            android:label="Desire/App/Activity/Dialog"
+            android:theme="@android:style/Theme.Holo.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityFinishAffinity"
+            android:label="Desire/App/Activity/Finish Affinity"
+            android:taskAffinity=":finishing" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityForwarding"
+            android:label="Desire/App/Activity/Forwarding" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityForwardTarget" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".app.AlertDialogs"
             android:label="Desire/App/Alert Dialogs" >
             <intent-filter>

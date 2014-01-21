@@ -59,5 +59,16 @@
     <string name="custom_title_right">Right is always right</string>
     <string name="custom_title_left_button">Change Left</string>
     <string name="custom_title_right_button">Change Right</string>
+    
+    <string name="dialog_activity_text">Example of how you can use the
+            Theme.Dialog theme to make an activity that looks like a
+            dialog.  It also has lots of text to show how text wrapping (and
+            corresponding window size adjustment) can happen in a dialog.</string>
+    <string name="dialog_activity_add">Add content</string>
+    <string name="dialog_activity_remove">Remove content</string>
+    
+    <string name="forwarding">Press the button to go forward to the next activity.  This activity will stop, so you will no longer see it when going back.</string>
+    <string name="go">Go</string>
+    <string name="forward_target">Press back button and notice we don\'t see the previous activity.</string>
 
 </resources>
