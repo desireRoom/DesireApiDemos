@@ -253,8 +253,20 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity android:name=".app.ActivityForwardTarget" >
+        </activity>
         <activity
-            android:name=".app.ActivityForwardTarget" >
+            android:name=".app.ActivityHelloWorld"
+            android:label="Desire/App/Activity/Hello World" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityIntentActivityFlags"
+            android:label="Desire/App/Activity/Intent Activity Flags" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

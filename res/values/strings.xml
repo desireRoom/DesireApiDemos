@@ -3,7 +3,6 @@
 
     <string name="app_name">DesireApiDemos</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
 
     <!-- ================================= -->
     <!--  app/action bar examples strings  -->
@@ -71,4 +70,12 @@
     <string name="go">Go</string>
     <string name="forward_target">Press back button and notice we don\'t see the previous activity.</string>
 
+    <string name="hello_world"><b>Hello, <i>World!</i></b></string>
+    
+    <!-- ============================== -->
+    <!--  app/intents activity flags examples strings     -->
+    <!-- ============================== -->
+    <string name="intent_activity_flags">Example of the use of various intent activity flags.</string>
+    <string name="flag_activity_clear_task">FLAG_ACTIVITY_CLEAR_TASK</string>
+    <string name="flag_activity_clear_task_pi">FLAG_ACTIVITY_CLEAR_TASK (PI)</string>
 </resources>
