@@ -274,6 +274,25 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".app.ActivityIntents"
+            android:label="Desire/App/Activity/Intents" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityPersistentState"
+            android:label="Desire/App/Activity/PersistentState"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".app.AlertDialogs"
             android:label="Desire/App/Alert Dialogs" >
             <intent-filter>

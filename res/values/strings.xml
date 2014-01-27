@@ -78,4 +78,16 @@
     <string name="intent_activity_flags">Example of the use of various intent activity flags.</string>
     <string name="flag_activity_clear_task">FLAG_ACTIVITY_CLEAR_TASK</string>
     <string name="flag_activity_clear_task_pi">FLAG_ACTIVITY_CLEAR_TASK (PI)</string>
+
+    <!-- ============================== -->
+    <!--  app/intents examples strings     -->
+    <!-- ============================== -->
+    <string name="intents">Example of launching various Intents.</string>
+    <string name="get_music">Get Music</string>
+    
+	<string name="persistent_msg">Demonstration of persistent activity state with getPreferences(0).edit() and getPreferences(0).</string>
+    <string name="saves_state">This text field saves its state:</string>
+    <string name="no_saves_state">This text field does not save its state:</string>
+    <string name="initial_text">Initial text.</string>
+
 </resources>
