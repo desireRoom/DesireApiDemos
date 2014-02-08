@@ -103,5 +103,16 @@
     <string name="presentation_display_id_text">Display #%1$d: %2$s</string>
     <string name="presentation_alert_info_text">Display #%1$d Info</string>
     <string name="presentation_alert_dismiss_text">OK</string>
+    
+    <!-- ============================== -->
+    <!--  app/Fragment -->
+    <!-- ============================== -->
+    <string name="show">Show</string>
+    <string name="alert_dialog_two_buttons_title">
+        Lorem ipsum dolor sit aie consectetur adipiscing\nPlloaso mako nuto
+        siwuf cakso dodtos anr koop.
+    </string>
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Cancel</string>
 
 </resources>

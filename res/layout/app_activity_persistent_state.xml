@@ -51,6 +51,8 @@
             android:background="@drawable/red"
             android:text="@string/initial_text"
             android:textAppearance="?android:attr/textAppearanceMedium" >
+
+            <requestFocus />
         </EditText>
     </LinearLayout>
 
