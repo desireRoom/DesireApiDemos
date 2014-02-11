@@ -120,5 +120,7 @@
     <string name="fragment_context_menu_msg">Fragment populating a context
             menu; long press the button to see.</string>
     <string name="long_press">Long press me</string>
+    <string name="new_fragment">Push</string>
+    <string name="delete_fragment">Pop</string>
 
 </resources>
