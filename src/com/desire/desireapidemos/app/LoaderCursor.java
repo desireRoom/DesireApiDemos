@@ -37,11 +37,13 @@ public class LoaderCursor extends Activity {
 
     }
 
-    public static class CursorLoaderListFragment extends ListFragment implements OnQueryTextListener, LoaderCallbacks<Cursor> {
+    public static class CursorLoaderListFragment extends ListFragment implements
+            OnQueryTextListener, LoaderCallbacks<Cursor> {
 
         // These are the Contacts rows that we will retrieve.
         static final String[] CONTACTS_SUMMARY_PROJECTION = new String[] {
-            Contacts._ID, Contacts.DISPLAY_NAME, Contacts.CONTACT_STATUS, Contacts.CONTACT_PRESENCE, Contacts.PHOTO_ID, Contacts.LOOKUP_KEY,
+            Contacts._ID, Contacts.DISPLAY_NAME, Contacts.CONTACT_STATUS,
+            Contacts.CONTACT_PRESENCE, Contacts.PHOTO_ID, Contacts.LOOKUP_KEY,
         };
 
         private SimpleCursorAdapter mAdapter;
@@ -56,11 +58,12 @@ public class LoaderCursor extends Activity {
 
             setHasOptionsMenu(true);
 
-            mAdapter = new SimpleCursorAdapter(getActivity(), android.R.layout.simple_list_item_2, null, new String[] {
-                Contacts.DISPLAY_NAME, Contacts.CONTACT_STATUS
-            }, new int[] {
-                android.R.id.text1, android.R.id.text2
-            }, 0);
+            mAdapter = new SimpleCursorAdapter(getActivity(), android.R.layout.simple_list_item_2,
+                    null, new String[] {
+                        Contacts.DISPLAY_NAME, Contacts.CONTACT_STATUS
+                    }, new int[] {
+                        android.R.id.text1, android.R.id.text2
+                    }, 0);
 
             setListAdapter(mAdapter);
 
@@ -72,7 +75,8 @@ public class LoaderCursor extends Activity {
         public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
             MenuItem item = menu.add("Search");
             item.setIcon(android.R.drawable.ic_menu_search);
-            item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
+            item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM
+                    | MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
 
             SearchView sv = new SearchView(getActivity());
             sv.setOnQueryTextListener(this);
@@ -116,14 +120,16 @@ public class LoaderCursor extends Activity {
                 baseUri = Uri.withAppendedPath(Contacts.CONTENT_FILTER_URI, Uri.encode(mCurFilter));
             }
 
-            String select = "((" + Contacts.DISPLAY_NAME + " NOTNULL) AND (" + Contacts.HAS_PHONE_NUMBER + "=1) AND (" + Contacts.DISPLAY_NAME + " != '' ))";
-            return new CursorLoader(getActivity(), baseUri, CONTACTS_SUMMARY_PROJECTION, select, null, Contacts.DISPLAY_NAME + " COLLATE LOCALIZED ASC");
+            String select = "((" + Contacts.DISPLAY_NAME + " NOTNULL) AND ("
+                    + Contacts.HAS_PHONE_NUMBER + "=1) AND (" + Contacts.DISPLAY_NAME + " != '' ))";
+            return new CursorLoader(getActivity(), baseUri, CONTACTS_SUMMARY_PROJECTION, select,
+                    null, Contacts.DISPLAY_NAME + " COLLATE LOCALIZED ASC");
         }
 
         @Override
         public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
             mAdapter.swapCursor(data);
-            
+
             if (isResumed()) {
                 setListShown(true);
             } else {

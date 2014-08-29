@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="17"
+        android:minSdkVersion="16"
         android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -298,6 +298,15 @@
         <activity
             android:name=".app.ActivityPresentation"
             android:label="Desire/App/Activity/Presentation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.ActivityPresentationWithMediaPouter"
+            android:label="Desire/App/Activity/Presentation with Media Router" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

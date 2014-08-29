@@ -33,13 +33,15 @@ import android.widget.TextView;
 
 import com.desire.desireapidemos.R;
 
-public class ActivityPresentation extends Activity implements OnCheckedChangeListener, OnClickListener {
+public class ActivityPresentation extends Activity implements OnCheckedChangeListener,
+        OnClickListener {
     private final String TAG = "ActivityPresentation";
 
     private static final String PRESENTATION_KEY = "presentation";
 
     private static final int[] PHOTOS = new int[] {
-        R.drawable.frantic, R.drawable.photo1, R.drawable.photo2, R.drawable.photo3, R.drawable.photo4, R.drawable.photo5, R.drawable.photo6, R.drawable.sample_4
+            R.drawable.frantic, R.drawable.photo1, R.drawable.photo2, R.drawable.photo3,
+            R.drawable.photo4, R.drawable.photo5, R.drawable.photo6, R.drawable.sample_4
     };
 
     private DisplayManager mDisplayManager;
@@ -95,7 +97,8 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
-            mSavedPresentationContents = savedInstanceState.getSparseParcelableArray(PRESENTATION_KEY);
+            mSavedPresentationContents = savedInstanceState
+                    .getSparseParcelableArray(PRESENTATION_KEY);
         } else {
             mSavedPresentationContents = new SparseArray<PresentationContents>();
         }
@@ -121,7 +124,8 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
         int numDisplay = mAdapter.getCount();
         for (int i = 0; i < numDisplay; i++) {
             final Display display = mAdapter.getItem(i);
-            final PresentationContents content = mSavedPresentationContents.get(display.getDisplayId());
+            final PresentationContents content = mSavedPresentationContents.get(display
+                    .getDisplayId());
             if (content != null) {
                 showPresentation(display, content);
             }
@@ -159,13 +163,17 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
         AlertDialog.Builder builder = new AlertDialog.Builder(c);
         final Display display = (Display) v.getTag();
         Resources res = c.getResources();
-        AlertDialog alert = builder.setTitle(res.getString(R.string.presentation_alert_info_text, display.getDisplayId())).setMessage(display.toString())
-                .setNegativeButton(R.string.presentation_alert_dismiss_text, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                }).create();
+        AlertDialog alert = builder
+                .setTitle(
+                        res.getString(R.string.presentation_alert_info_text, display.getDisplayId()))
+                .setMessage(display.toString())
+                .setNegativeButton(R.string.presentation_alert_dismiss_text,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        }).create();
         alert.show();
     }
 
@@ -196,7 +204,8 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
             return;
         }
 
-        Log.d(TAG, "Showing presentation photo #" + content.photo + " on display #" + displayId + ".");
+        Log.d(TAG, "Showing presentation photo #" + content.photo + " on display #" + displayId
+                + ".");
         DemoPresentation demo = new DemoPresentation(this, display, content);
         demo.show();
         demo.setOnDismissListener(mDismissListener);
@@ -238,10 +247,12 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
             CheckBox cb = (CheckBox) v.findViewById(R.id.checkbox_presentation);
             cb.setTag(display);
             cb.setOnCheckedChangeListener(ActivityPresentation.this);
-            cb.setChecked(mActivePresentations.indexOfKey(displayId) >= 0 || mSavedPresentationContents.indexOfKey(displayId) >= 0);
+            cb.setChecked(mActivePresentations.indexOfKey(displayId) >= 0
+                    || mSavedPresentationContents.indexOfKey(displayId) >= 0);
 
             TextView tv = (TextView) v.findViewById(R.id.display_id);
-            tv.setText(v.getContext().getResources().getString(R.string.presentation_display_id_text, displayId, display.getName()));
+            tv.setText(v.getContext().getResources()
+                    .getString(R.string.presentation_display_id_text, displayId, display.getName()));
 
             Button b = (Button) v.findViewById(R.id.info);
             b.setTag(display);
@@ -263,7 +274,8 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
         }
 
         private String getDisplayCategory() {
-            return mShowAllDisplaysCheckbox.isChecked() ? null : DisplayManager.DISPLAY_CATEGORY_PRESENTATION;
+            return mShowAllDisplaysCheckbox.isChecked() ? null
+                    : DisplayManager.DISPLAY_CATEGORY_PRESENTATION;
         }
 
     }
@@ -288,7 +300,8 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
             final int photo = dContent.photo;
 
             TextView tv = (TextView) findViewById(R.id.text);
-            tv.setText(res.getString(R.string.presentation_photo_text, photo, displayId, display.getName()));
+            tv.setText(res.getString(R.string.presentation_photo_text, photo, displayId,
+                    display.getName()));
 
             ImageView iv = (ImageView) findViewById(R.id.image);
             iv.setImageDrawable(res.getDrawable(PHOTOS[photo]));
@@ -328,14 +341,15 @@ public class ActivityPresentation extends Activity implements OnCheckedChangeLis
         public PresentationContents(int photo) {
             this.photo = photo;
             colors = new int[] {
-                ((int) (Math.random() * Integer.MAX_VALUE)) | 0xFF000000, ((int) (Math.random() * Integer.MAX_VALUE)) | 0xFF000000
+                    ((int) (Math.random() * Integer.MAX_VALUE)) | 0xFF000000,
+                    ((int) (Math.random() * Integer.MAX_VALUE)) | 0xFF000000
             };
         }
 
         public PresentationContents(Parcel in) {
             photo = in.readInt();
             colors = new int[] {
-                in.readInt(), in.readInt()
+                    in.readInt(), in.readInt()
             };
         }
 

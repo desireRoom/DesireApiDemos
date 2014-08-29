@@ -133,6 +133,7 @@ public class Events extends Activity {
 				xAnim.setRepeatCount(2);
 				xAnim.setRepeatMode(ValueAnimator.REVERSE);
 				xAnim.setInterpolator(new AccelerateInterpolator());
+				xAnim.addUpdateListener(this);
 				
 				animation = new AnimatorSet();
 				((AnimatorSet) animation).playTogether(xAnim, yAnim);
